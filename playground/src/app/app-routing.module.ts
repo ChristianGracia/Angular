@@ -3,6 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { LoginComponent } from './login/login.component';
 import { LandingComponent } from './landing/landing.component';
 import { ErrorComponent } from './error/error.component';
+import { ListTodosComponent } from './list-todos/list-todos.component';
 
 // welcome
 const routes: Routes = [
@@ -12,6 +13,7 @@ const routes: Routes = [
   {
     path: 'landing/:name', component: LandingComponent
   },
+  { path: 'todos', component: ListTodosComponent },
   {
     path: '**', component: ErrorComponent
   }
