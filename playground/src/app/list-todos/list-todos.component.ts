@@ -22,10 +22,10 @@ export class Todo {
   styleUrls: ['./list-todos.component.scss']
 })
 export class ListTodosComponent implements OnInit {
-  todos = [new Todo(1, 'Walk the dog'),
-  new Todo(2, 'Clean the dog'),
-  new Todo(3,'Feed the dog'),
-  new Todo(4, 'Walk the dog')
+  todos = [new Todo(1, 'Walk the dog', false, new Date()),
+  new Todo(2, 'Clean the dog', false, new Date()),
+  new Todo(3,'Feed the dog',  false, new Date()),
+  new Todo(4, 'Walk the dog',  false, new Date())
   ]
 
   constructor() { }
