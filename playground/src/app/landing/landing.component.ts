@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { MessageDataService } from '../service/data/message-data.service';
 
 @Component({
   selector: 'app-landing',
@@ -10,7 +11,7 @@ export class LandingComponent implements OnInit {
   message = 'hi';
   name = '';
 
-  constructor(private route: ActivatedRoute) { }
+  constructor(private route: ActivatedRoute, private messageDataService: MessageDataService) { }
 
   ngOnInit() {
     console.log(this.message);
@@ -18,6 +19,7 @@ export class LandingComponent implements OnInit {
   }
   getWelcomeMessage() {
     console.log('hi');
+    this.messageDataService.executeDisplayMessageBeanService();
 
   }
 

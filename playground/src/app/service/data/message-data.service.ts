@@ -6,4 +6,8 @@ import { Injectable } from '@angular/core';
 export class MessageDataService {
 
   constructor() { }
+
+  executeDisplayMessageBeanService() {
+    console.log('Execute Display message bean service');
+  }
 }
