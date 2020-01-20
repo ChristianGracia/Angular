@@ -26,14 +26,21 @@ export class LandingComponent implements OnInit {
     );
 
   }
+
+  getWelcomeMessageWithParam() {
+
+    this.messageDataService.executeDisplayMessageBeanServiceWithPath(this.name).subscribe(
+      response => this.handleSuccessfulResponse(response),
+      error => this.handleErrorResponse(error)
+    );
+
+  }
   handleSuccessfulResponse(response) {
     this.welcomeMessage = response.message;
 
   }
   handleErrorResponse(error) {
     this.welcomeMessage = error.error.message;
-
-
   }
 
 }

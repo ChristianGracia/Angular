@@ -20,4 +20,9 @@ export class MessageDataService {
   executeDisplayMessageBeanService() {
     return this.http.get<DisplayMessageBean>('http://localhost:8080/call-us-bean/');
   }
+
+  executeDisplayMessageBeanServiceWithPath(name) {
+    return this.http.get<DisplayMessageBean>(`http://localhost:8080/user/${name}`);
+  }
+
 }
