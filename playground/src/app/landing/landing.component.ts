@@ -10,6 +10,7 @@ import { MessageDataService } from '../service/data/message-data.service';
 export class LandingComponent implements OnInit {
   message = 'hi';
   name = '';
+  welcomeMessage: string;
 
   constructor(private route: ActivatedRoute, private messageDataService: MessageDataService) { }
 
@@ -18,8 +19,14 @@ export class LandingComponent implements OnInit {
     this.name = this.route.snapshot.params.name;
   }
   getWelcomeMessage() {
-    console.log('hi');
-    this.messageDataService.executeDisplayMessageBeanService();
+
+    this.messageDataService.executeDisplayMessageBeanService().subscribe(
+      response => this.handleSuccessfulResponse(response)
+    );
+
+  }
+  handleSuccessfulResponse(response) {
+    this.welcomeMessage = response.message;
 
   }
 

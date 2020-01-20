@@ -1,6 +1,13 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 
+export class DisplayMessageBean {
+
+  constructor(public message: string) {
+
+  }
+}
+
 @Injectable({
   providedIn: 'root'
 })
@@ -11,8 +18,6 @@ export class MessageDataService {
   ) { }
 
   executeDisplayMessageBeanService() {
-    this.http.get('http://localhost:8080/call-us-bean').subscribe();
-
-    return this.http.get('http://localhost:8080/call-us-bean');
+    return this.http.get<DisplayMessageBean>('http://localhost:8080/call-us-bean');
   }
 }

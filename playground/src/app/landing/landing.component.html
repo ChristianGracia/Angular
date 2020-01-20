@@ -8,6 +8,14 @@
 
 <div class="container">
   <span>Click to get a customized message</span>
+
   <div class="btn-div">
     <button (click)="getWelcomeMessage()" class="btn btn-success">Click me!</button></div>
+</div>
+
+<div class="container" *ngIf=welcomeMessage>
+  <span>Your customized message</span>
+
+  <div class="btn-div">
+    {{welcomeMessage}}</div>
 </div>
