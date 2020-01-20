@@ -1,7 +1,13 @@
-<H1>Welcome</H1>
+<H1 class="welcome-header">Welcome {{name}}</H1>
 
 
 <div class="container">
-Welcome {{name}}, to our new site!
-You can manage your todos <a routerLink="/todos">here</a>
+
+  You can manage your todos<div class="btn-div"> <a routerLink="/todos" class="btn btn-primary">Here</a></div>
+</div>
+
+<div class="container">
+  <span>Click to get a customized message</span>
+  <div class="btn-div">
+    <button (click)="getWelcomeMessage()" class="btn btn-success">Click me!</button></div>
 </div>

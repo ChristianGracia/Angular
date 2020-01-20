@@ -16,5 +16,8 @@ export class LandingComponent implements OnInit {
     console.log(this.message);
     this.name = this.route.snapshot.params.name;
   }
+  getWelcomeMessage() {
+
+  }
 
 }
