@@ -14,7 +14,7 @@ export class LandingComponent implements OnInit {
   constructor(private route: ActivatedRoute, private messageDataService: MessageDataService) { }
 
   ngOnInit() {
-    console.log(this.message);
+
     this.name = this.route.snapshot.params.name;
   }
   getWelcomeMessage() {
