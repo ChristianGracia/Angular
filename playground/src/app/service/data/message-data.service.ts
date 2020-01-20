@@ -13,11 +13,11 @@ export class DisplayMessageBean {
 })
 export class MessageDataService {
 
-  constructor(
-    private http: HttpClient
-  ) { }
+  constructor(private http: HttpClient) {
+
+  }
 
   executeDisplayMessageBeanService() {
-    return this.http.get<DisplayMessageBean>('http://localhost:8080/call-us-bean');
+    return this.http.get<DisplayMessageBean>('http://localhost:8080/call-us-bean/');
   }
 }

@@ -21,12 +21,18 @@ export class LandingComponent implements OnInit {
   getWelcomeMessage() {
 
     this.messageDataService.executeDisplayMessageBeanService().subscribe(
-      response => this.handleSuccessfulResponse(response)
+      response => this.handleSuccessfulResponse(response),
+      error => this.handleErrorResponse(error)
     );
 
   }
   handleSuccessfulResponse(response) {
     this.welcomeMessage = response.message;
+
+  }
+  handleErrorResponse(error) {
+    this.welcomeMessage = error.error.message;
+
 
   }
 
