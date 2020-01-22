@@ -21,28 +21,31 @@ export class Todo {
   styleUrls: ['./list-todos.component.scss']
 })
 export class ListTodosComponent implements OnInit {
-  todos: Todo[];
-  // todos = [new Todo(1, 'Walk the dog', false, new Date()),
-  // new Todo(2, 'Clean the dog', false, new Date()),
-  // new Todo(3,'Feed the dog',  false, new Date()),
-  // new Todo(4, 'Walk the dog',  false, new Date())
-  // ]
+  todos: Todo[]
+
+  message: string
 
   constructor(private todoService: TodoDataService) { }
 
   ngOnInit() {
+    this.refreshTodos();
+
+  }
+  refreshTodos() {
     this.todoService.executeGetAllTodosBean('chris').subscribe(
       response => {
         console.log(response);
         this.todos = response;
       }
     );
+
   }
   deleteTodo(id) {
     this.todoService.executeDeleteTodo('chris', id).subscribe(
       response => {
         console.log(response);
-        this.todos = response;
+        this.message = 'Delete successful';
+        this.refreshTodos();
       }
     )
   }
