@@ -21,9 +21,9 @@ export class Todo {
   styleUrls: ['./list-todos.component.scss']
 })
 export class ListTodosComponent implements OnInit {
-  todos: Todo[]
+  todos: Todo[];
 
-  message: string
+  message: string;
 
   constructor(private todoService: TodoDataService) { }
 
@@ -34,7 +34,6 @@ export class ListTodosComponent implements OnInit {
   refreshTodos() {
     this.todoService.executeGetAllTodosBean('chris').subscribe(
       response => {
-        console.log(response);
         this.todos = response;
       }
     );
@@ -43,7 +42,6 @@ export class ListTodosComponent implements OnInit {
   deleteTodo(id) {
     this.todoService.executeDeleteTodo('chris', id).subscribe(
       response => {
-        console.log(response);
         this.message = 'Delete successful';
         this.refreshTodos();
       }
