@@ -12,5 +12,10 @@ export class TodoDataService {
   executeGetAllTodosBean(username) {
     return this.http.get<Todo[]>(`http://localhost:8080/users/${username}/todos`);
   }
+  executeDeleteTodo(username, id) {
+    return this.http.delete<Todo[]>(`http://localhost:8080/users/${username}/todos/${id}`);
+  }
+
+
 
 }

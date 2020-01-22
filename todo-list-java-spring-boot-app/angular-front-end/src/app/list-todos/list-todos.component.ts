@@ -36,7 +36,16 @@ export class ListTodosComponent implements OnInit {
         console.log(response);
         this.todos = response;
       }
+    );
+  }
+  deleteTodo(id) {
+    this.todoService.executeDeleteTodo('chris', id).subscribe(
+      response => {
+        console.log(response);
+        this.todos = response;
+      }
     )
   }
 
 }
+
