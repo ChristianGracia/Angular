@@ -15,6 +15,9 @@ export class TodoDataService {
   executeDeleteTodo(username, id) {
     return this.http.delete<Todo[]>(`http://localhost:8080/users/${username}/todos/${id}`);
   }
+  // executeUpdateTodo(username, id) {
+  //   return this.http.put<Todo[]>(`http://localhost:8080/users/${username}/todos/${id}`);
+  // }
 
 
 

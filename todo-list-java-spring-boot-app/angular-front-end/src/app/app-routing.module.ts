@@ -4,8 +4,10 @@ import { LoginComponent } from './login/login.component';
 import { LandingComponent } from './landing/landing.component';
 import { ErrorComponent } from './error/error.component';
 import { ListTodosComponent } from './list-todos/list-todos.component';
-import { LogoutComponent } from './logout/logout.component'
+import { LogoutComponent } from './logout/logout.component';
 import { RouteGuardService } from './service/route-guard.service';
+import { TodoComponent } from './todo/todo.component';
+
 
 // welcome
 const routes: Routes = [
@@ -16,6 +18,7 @@ const routes: Routes = [
     path: 'landing/:name', component: LandingComponent, canActivate: [RouteGuardService]
   },
   { path: 'todos', component: ListTodosComponent, canActivate: [RouteGuardService] },
+  { path: 'todos/:id', component: TodoComponent, canActivate: [RouteGuardService] },
   { path: 'logout', component: LogoutComponent, canActivate: [RouteGuardService] },
   {
     path: '**', component: ErrorComponent
