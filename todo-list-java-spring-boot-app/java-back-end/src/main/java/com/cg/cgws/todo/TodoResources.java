@@ -54,7 +54,6 @@ public class TodoResources {
 	public ResponseEntity<Void> createTodo(@PathVariable String username, @RequestBody Todo todo) {
 		Todo newTodo = todoService.save(todo);
 		URI uri = ServletUriComponentsBuilder.fromCurrentRequest().path("/{id}").buildAndExpand(newTodo.getId()).toUri();
-		
 		return ResponseEntity.created(uri).build();
 	}
 
