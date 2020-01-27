@@ -17,7 +17,7 @@
     </thead>
     <tbody>
       <tr *ngFor="let todo of todos">
-       
+
         <td>{{todo.description}}</td>
         <td>{{todo.targetDate | date}}</td>
         <td>{{todo.done}}</td>
@@ -29,6 +29,6 @@
     </tbody>
   </table>
   <div class="row ml-auto mr-auto create-todo-btn">
-       <button class="btn btn-primary" (click)="createTodo()">Create Todo</button>
+    <button class="btn btn-primary" (click)="createTodo()">Create Todo</button>
   </div>
 </div>
