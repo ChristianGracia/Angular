@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { TodoDataService } from '../service/data/todo-data.service';
-import { Router } from '@angular/router'
+import { Router } from '@angular/router';
 
 
 export class Todo {
@@ -8,7 +8,8 @@ export class Todo {
     public id: number,
     public description: string,
     public done: boolean,
-    public targetDate: Date
+    public targetDate: Date,
+
   ) {
 
   }
@@ -51,7 +52,7 @@ export class ListTodosComponent implements OnInit {
   updateTodo(id) {
     this.router.navigate(['/todos', id]);
   }
-  createTodo(){
+  createTodo() {
     this.router.navigate(['/todos', -1]);
 
   }
