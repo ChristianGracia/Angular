@@ -23,13 +23,13 @@ export class MessageDataService {
 
   executeDisplayMessageBeanServiceWithPath(name) {
     const basicAuthenticationString = this.createBasicAuthenticationHttpHeaders();
-    const headers = new HttpHeaders({ Authentication: basicAuthenticationString });
+    const headers = new HttpHeaders({ Authorization: basicAuthenticationString });
     return this.http.get<DisplayMessageBean>(`http://localhost:8080/user/${name}`, { headers });
   }
   createBasicAuthenticationHttpHeaders() {
-    const username = 'user';
-    const password = 'pass';
-    const basicAuthenticationString = 'Basic ' + window.btoa(username + ':' + password);
+    let username = 'user';
+    let password = 'pass';
+    let basicAuthenticationString = 'Basic ' + window.btoa(username + ':' + password);
     return basicAuthenticationString;
   }
 

@@ -14,12 +14,11 @@ public class SpringSecurityConfigurationBasicAuth extends WebSecurityConfigurerA
 	protected void configure(HttpSecurity http) throws Exception {
 		
 		http
-		    .csrf().disable()
-			.authorizeRequests()
-			.antMatchers(HttpMethod.OPTIONS, "/**").permitAll()
+		.csrf().disable()
+		.authorizeRequests()
+		.antMatchers(HttpMethod.OPTIONS, "/**").permitAll()
 				.anyRequest().authenticated()
 				.and()
-			//.formLogin().and()
 			.httpBasic();
 	}
 
