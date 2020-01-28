@@ -23,7 +23,7 @@ export class TodoComponent implements OnInit {
     if (this.id != -1) {
       this.todoService.executeRetrieveTodo('christian', this.id)
         .subscribe(
-          data => this.todo = data
+          data => console.log(data)
         );
     }
   }

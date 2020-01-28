@@ -12,11 +12,6 @@ public class TodoHardCodedService {
 	private static List<Todo> todos = new ArrayList<Todo>();
 	private static int idCounter = 0;
 	
-	static {
-		todos.add(new Todo(++idCounter, "christian", "Learn to walk", new Date(), false ));
-		todos.add(new Todo(++idCounter, "christian", "Learn to talk", new Date(), false ));
-		todos.add(new Todo(++idCounter, "christian", "Learn to sing", new Date(), false ));
-	}
 	
 	public List<Todo> findAll(){
 		return todos;

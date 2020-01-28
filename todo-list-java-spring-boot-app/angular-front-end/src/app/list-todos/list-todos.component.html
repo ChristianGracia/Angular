@@ -16,7 +16,7 @@
       </tr>
     </thead>
     <tbody>
-      <tr *ngFor="let todo of todos">
+      <tr *ngFor="let todo of todos" class="todo-row">
 
         <td>{{todo.description}}</td>
         <td>{{todo.targetDate | date}}</td>
