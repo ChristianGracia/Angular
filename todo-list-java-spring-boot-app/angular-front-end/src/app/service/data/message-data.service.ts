@@ -24,5 +24,11 @@ export class MessageDataService {
   executeDisplayMessageBeanServiceWithPath(name) {
     return this.http.get<DisplayMessageBean>(`http://localhost:8080/user/${name}`);
   }
+  createBasicAuthenticationHttpHeaders() {
+    let username = 'user';
+    let password = 'pass';
+    let basicAuthenticationString = 'Basic ' + window.btoa(username + ':' + password);
+    return basicAuthenticationString;
+  }
 
 }
