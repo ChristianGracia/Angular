@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 
 export class DisplayMessageBean {
 
@@ -22,12 +22,14 @@ export class MessageDataService {
   }
 
   executeDisplayMessageBeanServiceWithPath(name) {
-    return this.http.get<DisplayMessageBean>(`http://localhost:8080/user/${name}`);
+    const basicAuthenticationString = this.createBasicAuthenticationHttpHeaders();
+    const header = new HttpHeaders({ Authentication: basicAuthenticationString });
+    return this.http.get<DisplayMessageBean>(`http://localhost:8080/user/${name}`, { headers: header });
   }
   createBasicAuthenticationHttpHeaders() {
-    let username = 'user';
-    let password = 'pass';
-    let basicAuthenticationString = 'Basic ' + window.btoa(username + ':' + password);
+    const username = 'user';
+    const password = 'pass';
+    const basicAuthenticationString = 'Basic ' + window.btoa(username + ':' + password);
     return basicAuthenticationString;
   }
 
