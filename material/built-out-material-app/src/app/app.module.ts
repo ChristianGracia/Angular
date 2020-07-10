@@ -16,6 +16,8 @@ import { SignupComponent } from './auth/signup/signup.component';
 
 import { FlexLayoutModule } from '@angular/flex-layout';
 
+import { FormsModule } from '@angular/forms'
+
 
 @NgModule({
   declarations: [
@@ -33,6 +35,7 @@ import { FlexLayoutModule } from '@angular/flex-layout';
     BrowserAnimationsModule,
     MaterialModule,
     FlexLayoutModule,
+    FormsModule,
     AppRoutingModule
   ],
   providers: [],
