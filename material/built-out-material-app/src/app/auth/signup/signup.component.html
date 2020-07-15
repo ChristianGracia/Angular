@@ -13,7 +13,8 @@
       <mat-error *ngIf="passwordInput.value?.length < 6">Should be at least 6 characters</mat-error>
     </mat-form-field>
     <mat-form-field>
-      <input matInput placeholder="Birthdate" [matDatepicker]="picker" [max]="maxDate">
+      <input matInput placeholder="Birthdate" [matDatepicker]="picker" [max]="maxDate" ngModel name="birthdater"
+        required>
       <mat-datepicker-toggle matSuffix [for]="picker">
       </mat-datepicker-toggle>
       <mat-datepicker #picker>
@@ -21,7 +22,7 @@
 
     </mat-form-field>
 
-    <mat-checkbox>
+    <mat-checkbox ngModel name="termsCheckbox">
       Agree to Terms and Conditions
     </mat-checkbox>
 
