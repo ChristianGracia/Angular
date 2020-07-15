@@ -18,7 +18,8 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 
 import { FormsModule } from '@angular/forms';
 import { HeaderComponent } from './navigation/header/header.component';
-import { SitenavListComponent } from './navigation/sitenav-list/sitenav-list.component'
+
+import { SidenavListComponent } from './navigation/sidenav-list/sidenav-list.component';
 
 
 @NgModule({
@@ -32,7 +33,7 @@ import { SitenavListComponent } from './navigation/sitenav-list/sitenav-list.com
     WelcomeComponent,
     SignupComponent,
     HeaderComponent,
-    SitenavListComponent
+    SidenavListComponent
   ],
   imports: [
     BrowserModule,
