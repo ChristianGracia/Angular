@@ -16,7 +16,9 @@ import { SignupComponent } from './auth/signup/signup.component';
 
 import { FlexLayoutModule } from '@angular/flex-layout';
 
-import { FormsModule } from '@angular/forms'
+import { FormsModule } from '@angular/forms';
+import { HeaderComponent } from './navigation/header/header.component';
+import { SitenavListComponent } from './navigation/sitenav-list/sitenav-list.component'
 
 
 @NgModule({
@@ -28,7 +30,9 @@ import { FormsModule } from '@angular/forms'
     NewTrainingComponent,
     PastTrainingsComponent,
     WelcomeComponent,
-    SignupComponent
+    SignupComponent,
+    HeaderComponent,
+    SitenavListComponent
   ],
   imports: [
     BrowserModule,
