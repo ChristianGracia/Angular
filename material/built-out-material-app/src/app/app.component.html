@@ -3,7 +3,28 @@
     <p>Menu</p>
   </mat-sidenav>
   <mat-sidenav-content>
-    <mat-toolbar>My toolbar</mat-toolbar>
+    <mat-toolbar color="primary">
+      <div>
+        <button mat-icon-button (click)="sidenav.toggle()">
+          <mat-icon>menu
+
+          </mat-icon>
+        </button>
+      </div>
+      <div>
+        LOGO
+      </div>
+      <div>
+        <a routerLink="/signup">Signup</a>
+      </div>
+      <div>
+        <a routerLink="/login">Login</a>
+      </div>
+      <div>
+        <a routerLink="/training">Training</a>
+      </div>
+
+    </mat-toolbar>
     <main>
       <router-outlet></router-outlet>
     </main>
