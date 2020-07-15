@@ -3,8 +3,11 @@
     <p>Menu</p>
   </mat-sidenav>
   <mat-sidenav-content>
-    <button (click)="sidenav.toggle()">Show Sidenav</button>
-    <router-outlet></router-outlet>
+    <mat-toolbar>My toolbar</mat-toolbar>
+    <main>
+      <router-outlet></router-outlet>
+    </main>
+
 
   </mat-sidenav-content>
 
