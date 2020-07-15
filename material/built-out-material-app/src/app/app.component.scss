@@ -9,12 +9,13 @@ mat-sidenav{
 
 a{
   text-decoration: none;
-  color: #fff
-}
-a:hover,a:active{
+  color: #fff;
 
-  color: light-grey;
+  &:hover{
+  color: grey;
+  }
 }
+
 
 .navigation-items{
   list-style: none;
