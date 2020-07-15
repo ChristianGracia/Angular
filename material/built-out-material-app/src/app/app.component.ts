@@ -6,5 +6,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'basic-app-with-material';
+  public openSidenav = false;
+  public title = 'basic-app-with-material';
 }
