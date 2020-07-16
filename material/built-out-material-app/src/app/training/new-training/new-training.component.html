@@ -8,12 +8,15 @@
       Select type of training
       <mat-form-field>
         <mat-select placeholder="Workouts">
-          <mat-option value="crunches">
+          <mat-option value="workout.name" *ngFor="let workout of exercises">
+            {{workout.name}}
+          </mat-option>
+          <!-- <mat-option value="crunches">
             Crunches
           </mat-option>
           <mat-option value="pushups">
             pushups
-          </mat-option>
+          </mat-option> -->
         </mat-select>
       </mat-form-field>
     </mat-card-content>
