@@ -6,10 +6,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./current-training.component.scss']
 })
 export class CurrentTrainingComponent implements OnInit {
+  public progress = 0;
 
   constructor() { }
 
   ngOnInit() {
+    setInterval(() => {
+      ;
+      this.progress = this.progress + 5;
+    }, 1000);
   }
 
 }
