@@ -8,7 +8,7 @@
   <a mat-list-item routerLink="/training" *ngIf="isAuth">
     <mat-icon>accessibility</mat-icon><span class="nav-caption" (click)="onClose()">Training</span>
   </a>
-  <button mat-icon-button *ngIf="isAuth">
+  <button mat-icon-button (click)="onLogout()" *ngIf="isAuth">
     <mat-icon>eject</mat-icon><span>Logout</span>
   </button>
 
